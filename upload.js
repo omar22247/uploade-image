@@ -11,10 +11,12 @@ previewImg = uploadbox.querySelector("img"),
 
     };
 let ratio;
-
+let tmp;
 const loadFile = (e) => {
     const file = e.target.files[0];
-    console.log(file)
+    console.log(file);
+    tmp = file.type;
+    console.log(file.type)
         // getting first user selected file
     if (!file) return; // return if user hasn't selected any file
     previewImg.src = URL.createObjectURL(file);
@@ -46,7 +48,7 @@ const resizeAndDownload = () => {
 
     // if quality checkbox is checked, pass 0.5 to imgQuality else pass 1.0
     // 1.0 is 100% quality where 0.5 is 50% of total. you can pass from 0.1 - 1.0
-    const imgQuality = qualityInput.checked ? 0.5 : 1.0;
+    // const imgQuality = qualityInput.checked ? 0.5 : 1.0;
 
     // setting canvas height & width according to the input values
     canvas.width = widthInput.value;
@@ -56,7 +58,7 @@ const resizeAndDownload = () => {
     ctx.drawImage(previewImg, 0, 0, canvas.width, canvas.height);
 
     // passing canvas data url as href value of <a> element
-    a.href = canvas.toDataURL("image/jpeg");
+    a.href = canvas.toDataURL(tmp); //orignal type of photo
     a.download = new Date().getTime(); // passing current time as download value
     a.click(); // clicking <a> element so the file download
 }
