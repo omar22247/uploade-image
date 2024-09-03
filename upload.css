@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    align-content: center;
+    background-color: rgb(6, 129, 49);
+}
+
+.container {
+    background-color: white;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    /* height: 65vh; */
+    padding: 20px 20px 20px 20px;
+}
+
+
+/* .con {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.uploadbox {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    height: 30vh;
+    margin-bottom: 20px;
+    text-align: center;
+    align-content: center;
+    border: 1px black dashed;
+}
+
+.uploadbox p {
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+.uploadbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    /* height: 20vh; */
+    /* background-color: bisque; */
+    margin-bottom: 20px;
+}
+
+.c1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 8px;
+}
+
+.c1 input {
+    max-width: 100%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(164, 158, 158);
+}
+
+.ch1 {
+    display: flex;
+    align-content: center;
+}
+
+.ch1 p {
+    /* display: flex; */
+    align-content: center;
+    margin-left: 4px;
+}
+
+.bu {
+    text-align: center;
+    height: 1fr;
+    /* background-color: blue; */
+    height: 100%;
+}
+
+.bu button {
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(6, 129, 49);
+}
